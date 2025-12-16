@@ -5,6 +5,19 @@ import logging
 import argparse
 from datetime import datetime
 
+"""
+Projektuppgift – Applied Script (IT- och Cybersäkerhetsspecialist)
+
+Syfte:
+- Automatisera grundläggande säkerhetskontroller på ett Linux-system.
+- Logga resultat till fil för spårbarhet.
+"""
+
+SCRIPT_NAME = "Projektuppgift Applied Script"
+VERSION = "1.0"
+LOG_FILE = "/var/log/security_scan.log"
+
+
 SCRIPT_NAME = "Security Scan Script"
 VERSION = "1.0"
 LOG_FILE = "/var/log/security_scan.log"
