@@ -3,11 +3,9 @@
 #
 # Detta script samlar in systeminformation - RECON
 #
-# Kan användas för följande attacker:
-# [Skriv möjliga attacker]
 #
-# Author: Frans Schartau
-# Last Update: 2025-01-01
+# Author: Daniel Törnblom
+# Last Update: 2025-12-11
 GREEN="\e[32m"
 NC="\e[0m"
 
@@ -38,5 +36,5 @@ echo
 echo "${GREEN}=== Ram-använding  ===${NC}"
 free 
 #
-# skriv in dina kommandon för tester
+# 
 #
