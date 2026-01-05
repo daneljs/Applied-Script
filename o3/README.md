@@ -1,12 +1,16 @@
-## 🛡️ Övning 3 – AV/EDR-test
+## Övning 3 – AV/EDR-test (Windows-miljö)
 
 ### Uppgift
-Syftet med övningen var att testa hur antivirus- eller EDR-lösningar reagerar på misstänkt innehåll, utan att använda verklig skadlig kod.
+- Testa hur antivirus- eller EDR-lösningar reagerar på misstänkt innehåll  
+- Genomföra test i en Windows-miljö  
+- Utföra test utan att använda verklig skadlig kod  
 
 ### Lösning
-Jag genomförde testet genom att:
-- Använda en ofarlig teststräng (t.ex. EICAR-test)  
-- Observera hur säkerhetslösningen reagerade  
-- Dokumentera resultatet av testet  
+- Testet genomfördes i en Windows-miljö  
+- En ofarlig teststräng (EICAR-test) användes för att simulera skadligt innehåll  
+- Säkerhetslösningens reaktion observerades och dokumenterades  
 
-Övningen ger förståelse för hur säkerhetslösningar identifierar och hanterar potentiella hot.
+### Resultat
+- Verifierade att antivirus/EDR reagerade korrekt på misstänkt innehåll  
+- Gav praktisk förståelse för hur säkerhetslösningar fungerar i Windows-miljö  
+- Visade hur tester kan utföras säkert i kontrollerad testmiljö
