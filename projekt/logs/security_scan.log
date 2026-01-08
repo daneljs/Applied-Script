@@ -1,0 +1,345 @@
+2026-01-05 21:53:26,200 - INFO - Script startat
+2026-01-05 21:53:26,206 - INFO - Kör kommando: hostname
+2026-01-05 21:53:26,206 - INFO - Return code: 0
+2026-01-05 21:53:26,206 - INFO - Output: kali
+2026-01-05 21:53:26,211 - INFO - Kör kommando: uname -r
+2026-01-05 21:53:26,212 - INFO - Return code: 0
+2026-01-05 21:53:26,212 - INFO - Output: 6.17.10+kali-amd64
+2026-01-05 21:53:26,218 - INFO - Kör kommando: ip a
+2026-01-05 21:53:26,218 - INFO - Return code: 0
+2026-01-05 21:53:26,218 - INFO - Output: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 84884sec preferred_lft 84884sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86011sec preferred_lft 14011sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86011sec preferred_lft 14011sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-05 21:53:26,222 - INFO - Kör kommando: ip r
+2026-01-05 21:53:26,222 - INFO - Return code: 0
+2026-01-05 21:53:26,222 - INFO - Output: default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-05 21:53:26,301 - INFO - Kör kommando: ss -tulpen
+2026-01-05 21:53:26,301 - INFO - Return code: 0
+2026-01-05 21:53:26,301 - INFO - Output: Netid State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+2026-01-05 21:53:26,301 - INFO - Script avslutades korrekt
+2026-01-05 22:16:08,539 - INFO - Script startat
+2026-01-05 22:16:08,542 - INFO - Kör kommando: hostname
+2026-01-05 22:16:08,542 - INFO - Return code: 0
+2026-01-05 22:16:08,542 - INFO - Output: kali
+2026-01-05 22:16:08,544 - INFO - Kör kommando: uname -r
+2026-01-05 22:16:08,544 - INFO - Return code: 0
+2026-01-05 22:16:08,545 - INFO - Output: 6.17.10+kali-amd64
+2026-01-05 22:16:08,548 - INFO - Kör kommando: ip a
+2026-01-05 22:16:08,548 - INFO - Return code: 0
+2026-01-05 22:16:08,548 - INFO - Output: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 83522sec preferred_lft 83522sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86373sec preferred_lft 14373sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86373sec preferred_lft 14373sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-05 22:16:08,550 - INFO - Kör kommando: ip r
+2026-01-05 22:16:08,551 - INFO - Return code: 0
+2026-01-05 22:16:08,551 - INFO - Output: default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-05 22:16:08,573 - INFO - Kör kommando: ss -tulpen
+2026-01-05 22:16:08,573 - INFO - Return code: 0
+2026-01-05 22:16:08,573 - INFO - Output: Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                             
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6)) ino:41273 sk:1 cgroup:/system.slice/ssh.service <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7)) ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-05 22:16:08,573 - INFO - Script avslutades korrekt
+2026-01-07 14:25:54,882 - INFO - Script startat
+2026-01-07 14:25:54,889 - INFO - Kör kommando: hostname | return code: 0
+2026-01-07 14:25:54,889 - INFO - Output: kali
+2026-01-07 14:25:54,895 - INFO - Kör kommando: uname -r | return code: 0
+2026-01-07 14:25:54,895 - INFO - Output: 6.17.10+kali-amd64
+2026-01-07 14:25:54,900 - INFO - Kör kommando: uptime | return code: 0
+2026-01-07 14:25:54,900 - INFO - Output: 14:25:54 up  2:52,  1 user,  load average: 1,01, 0,52, 0,36
+2026-01-07 14:25:54,906 - INFO - Kör kommando: ip a | return code: 0
+2026-01-07 14:25:54,906 - INFO - Output: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 76053sec preferred_lft 76053sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86039sec preferred_lft 14039sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86039sec preferred_lft 14039sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-07 14:25:54,909 - INFO - Kör kommando: ip r | return code: 0
+2026-01-07 14:25:54,910 - INFO - Output: default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-07 14:25:54,943 - INFO - Kör kommando: ss -tulpen | return code: 0
+2026-01-07 14:25:54,943 - INFO - Output: Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                                                           
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6))  ino:41273 sk:1 cgroup:/system.slice/ssh.service <->                                                                             
+tcp   LISTEN 0      511        127.0.0.1:5847      0.0.0.0:*    users:(("code",pid=79977,fd=39)) uid:1000 ino:168221 sk:3 cgroup:/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.chromium.Chromium-4680.scope <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7))  ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-07 14:25:54,943 - INFO - Script avslutades korrekt
+2026-01-07 14:29:48,018 - INFO - Script startat
+2026-01-07 14:29:48,021 - INFO - Kör kommando: hostname | return code: 0
+2026-01-07 14:29:48,022 - INFO - Output: kali
+2026-01-07 14:29:48,030 - INFO - Kör kommando: uname -r | return code: 0
+2026-01-07 14:29:48,031 - INFO - Output: 6.17.10+kali-amd64
+2026-01-07 14:29:48,036 - INFO - Kör kommando: uptime | return code: 0
+2026-01-07 14:29:48,036 - INFO - Output: 14:29:48 up  2:56,  1 user,  load average: 1,33, 0,60, 0,41
+2026-01-07 14:29:48,044 - INFO - Kör kommando: ip a | return code: 0
+2026-01-07 14:29:48,045 - INFO - Output: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 75820sec preferred_lft 75820sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86278sec preferred_lft 14278sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86278sec preferred_lft 14278sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-07 14:29:48,049 - INFO - Kör kommando: ip r | return code: 0
+2026-01-07 14:29:48,049 - INFO - Output: default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-07 14:29:48,087 - INFO - Kör kommando: ss -tulpen | return code: 0
+2026-01-07 14:29:48,087 - INFO - Output: Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                                                           
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6))  ino:41273 sk:1 cgroup:/system.slice/ssh.service <->                                                                             
+tcp   LISTEN 0      511        127.0.0.1:5847      0.0.0.0:*    users:(("code",pid=79977,fd=39)) uid:1000 ino:168221 sk:3 cgroup:/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.chromium.Chromium-4680.scope <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7))  ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-07 14:29:48,088 - INFO - Script avslutades korrekt
+2026-01-07 14:32:06,118 - INFO - Script startat
+2026-01-07 14:32:06,124 - INFO - Kör kommando: hostname | return code: 0
+2026-01-07 14:32:06,124 - INFO - Output: kali
+2026-01-07 14:32:06,128 - INFO - Kör kommando: uname -r | return code: 0
+2026-01-07 14:32:06,129 - INFO - Output: 6.17.10+kali-amd64
+2026-01-07 14:32:06,135 - INFO - Kör kommando: uptime | return code: 0
+2026-01-07 14:32:06,135 - INFO - Output: 14:32:06 up  2:59,  1 user,  load average: 0,22, 0,41, 0,36
+2026-01-07 14:32:06,139 - INFO - Kör kommando: ip a | return code: 0
+2026-01-07 14:32:06,139 - INFO - Output: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 75681sec preferred_lft 75681sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86140sec preferred_lft 14140sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86140sec preferred_lft 14140sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-07 14:32:06,143 - INFO - Kör kommando: ip r | return code: 0
+2026-01-07 14:32:06,143 - INFO - Output: default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-07 14:32:06,170 - INFO - Kör kommando: ss -tulpen | return code: 0
+2026-01-07 14:32:06,170 - INFO - Output: Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                                                           
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6))  ino:41273 sk:1 cgroup:/system.slice/ssh.service <->                                                                             
+tcp   LISTEN 0      511        127.0.0.1:5847      0.0.0.0:*    users:(("code",pid=79977,fd=39)) uid:1000 ino:168221 sk:3 cgroup:/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.chromium.Chromium-4680.scope <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7))  ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-07 14:32:06,170 - INFO - Script avslutades korrekt
+2026-01-07 15:11:27,895 - INFO - Script startat
+2026-01-07 15:11:27,898 - INFO - Kör kommando: hostname | return code: 0
+2026-01-07 15:11:27,899 - INFO - Output:
+kali
+2026-01-07 15:11:27,904 - INFO - Kör kommando: uname -r | return code: 0
+2026-01-07 15:11:27,905 - INFO - Output:
+6.17.10+kali-amd64
+2026-01-07 15:11:27,909 - INFO - Kör kommando: uptime | return code: 0
+2026-01-07 15:11:27,909 - INFO - Output:
+15:11:27 up  3:38,  1 user,  load average: 0,50, 0,27, 0,21
+2026-01-07 15:11:27,913 - INFO - Kör kommando: ip a | return code: 0
+2026-01-07 15:11:27,913 - INFO - Output:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 73320sec preferred_lft 73320sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86391sec preferred_lft 14391sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86391sec preferred_lft 14391sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-07 15:11:27,920 - INFO - Kör kommando: ip r | return code: 0
+2026-01-07 15:11:27,920 - INFO - Output:
+default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-07 15:11:27,952 - INFO - Kör kommando: ss -tulpen | return code: 0
+2026-01-07 15:11:27,952 - INFO - Output:
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                                                           
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6))  ino:41273 sk:1 cgroup:/system.slice/ssh.service <->                                                                             
+tcp   LISTEN 0      511        127.0.0.1:5847      0.0.0.0:*    users:(("code",pid=79977,fd=39)) uid:1000 ino:168221 sk:3 cgroup:/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.chromium.Chromium-4680.scope <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7))  ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-07 15:11:27,952 - INFO - Script avslutades korrekt
+2026-01-08 09:00:44,807 - INFO - Script startat
+2026-01-08 09:00:44,813 - INFO - Kör kommando: hostname | return code: 0
+2026-01-08 09:00:44,813 - INFO - Output:
+kali
+2026-01-08 09:00:44,816 - INFO - Kör kommando: uname -r | return code: 0
+2026-01-08 09:00:44,816 - INFO - Output:
+6.17.10+kali-amd64
+2026-01-08 09:00:44,820 - INFO - Kör kommando: uptime | return code: 0
+2026-01-08 09:00:44,820 - INFO - Output:
+09:00:44 up  4:48,  1 user,  load average: 0,20, 0,15, 0,15
+2026-01-08 09:00:44,823 - INFO - Kör kommando: ip a | return code: 0
+2026-01-08 09:00:44,823 - INFO - Output:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 69136sec preferred_lft 69136sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86039sec preferred_lft 14039sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86039sec preferred_lft 14039sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-08 09:00:44,828 - INFO - Kör kommando: ip r | return code: 0
+2026-01-08 09:00:44,828 - INFO - Output:
+default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-08 09:00:44,854 - INFO - Kör kommando: ss -tulpen | return code: 0
+2026-01-08 09:00:44,854 - INFO - Output:
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                                                           
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6))  ino:41273 sk:1 cgroup:/system.slice/ssh.service <->                                                                             
+tcp   LISTEN 0      511        127.0.0.1:5847      0.0.0.0:*    users:(("code",pid=79977,fd=39)) uid:1000 ino:168221 sk:3 cgroup:/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.chromium.Chromium-4680.scope <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7))  ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-08 09:00:44,854 - INFO - Script avslutades korrekt
+2026-01-08 09:23:49,797 - INFO - Script startat
+2026-01-08 09:23:49,804 - INFO - Kör kommando: hostname | return code: 0
+2026-01-08 09:23:49,805 - INFO - Output:
+kali
+2026-01-08 09:23:49,810 - INFO - Kör kommando: uname -r | return code: 0
+2026-01-08 09:23:49,810 - INFO - Output:
+6.17.10+kali-amd64
+2026-01-08 09:23:49,813 - INFO - Kör kommando: uptime | return code: 0
+2026-01-08 09:23:49,813 - INFO - Output:
+09:23:49 up  5:11,  1 user,  load average: 0,78, 0,76, 0,43
+2026-01-08 09:23:49,816 - INFO - Kör kommando: ip a | return code: 0
+2026-01-08 09:23:49,816 - INFO - Output:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 67751sec preferred_lft 67751sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86394sec preferred_lft 14394sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86394sec preferred_lft 14394sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-08 09:23:49,821 - INFO - Kör kommando: ip r | return code: 0
+2026-01-08 09:23:49,822 - INFO - Output:
+default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-08 09:23:49,845 - INFO - Kör kommando: ss -tulpen | return code: 0
+2026-01-08 09:23:49,845 - INFO - Output:
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                                                           
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6))  ino:41273 sk:1 cgroup:/system.slice/ssh.service <->                                                                             
+tcp   LISTEN 0      511        127.0.0.1:5847      0.0.0.0:*    users:(("code",pid=79977,fd=39)) uid:1000 ino:168221 sk:3 cgroup:/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.chromium.Chromium-4680.scope <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7))  ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-08 09:23:49,845 - INFO - Script avslutades korrekt
+2026-01-08 09:25:05,531 - INFO - Script startat
+2026-01-08 09:25:05,535 - INFO - Kör kommando: hostname | return code: 0
+2026-01-08 09:25:05,535 - INFO - Output:
+kali
+2026-01-08 09:25:05,539 - INFO - Kör kommando: uname -r | return code: 0
+2026-01-08 09:25:05,540 - INFO - Output:
+6.17.10+kali-amd64
+2026-01-08 09:25:05,545 - INFO - Kör kommando: uptime | return code: 0
+2026-01-08 09:25:05,545 - INFO - Output:
+09:25:05 up  5:12,  1 user,  load average: 0,78, 0,73, 0,45
+2026-01-08 09:25:05,550 - INFO - Kör kommando: ip a | return code: 0
+2026-01-08 09:25:05,550 - INFO - Output:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:62:b0:2d brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 67676sec preferred_lft 67676sec
+    inet6 fd17:625c:f037:2:165f:53ed:b5a7:fe25/64 scope global temporary dynamic 
+       valid_lft 86318sec preferred_lft 14318sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe62:b02d/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86318sec preferred_lft 14318sec
+    inet6 fe80::a00:27ff:fe62:b02d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+2026-01-08 09:25:05,554 - INFO - Kör kommando: ip r | return code: 0
+2026-01-08 09:25:05,554 - INFO - Output:
+default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
+2026-01-08 09:25:05,579 - INFO - Kör kommando: ss -tulpen | return code: 0
+2026-01-08 09:25:05,579 - INFO - Output:
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                                                           
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=14603,fd=6))  ino:41273 sk:1 cgroup:/system.slice/ssh.service <->                                                                             
+tcp   LISTEN 0      511        127.0.0.1:5847      0.0.0.0:*    users:(("code",pid=79977,fd=39)) uid:1000 ino:168221 sk:3 cgroup:/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.chromium.Chromium-4680.scope <->
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=14603,fd=7))  ino:41283 sk:2 cgroup:/system.slice/ssh.service v6only:1 <->
+2026-01-08 09:25:39,371 - INFO - Kör kommando: bash -lc find / -perm -4000 -type f 2>/dev/null | head -n 20 | return code: 0
+2026-01-08 09:25:39,372 - INFO - Output:
+/opt/VBoxGuestAdditions-7.2.4/bin/VBoxDRMClient
+/usr/share/code/chrome-sandbox
+/usr/lib/openssh/ssh-keysign
+/usr/lib/xorg/Xorg.wrap
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/lib/chromium/chrome-sandbox
+/usr/bin/su
+/usr/bin/ntfs-3g
+/usr/bin/kismet_cap_nxp_kw41z
+/usr/bin/newgrp
+/usr/bin/mount
+/usr/bin/passwd
+/usr/bin/gpasswd
+/usr/bin/kismet_cap_ti_cc_2531
+/usr/bin/kismet_cap_linux_wifi
+/usr/bin/pkexec
+/usr/bin/kismet_cap_nrf_51822
+/usr/bin/chsh
+2026-01-08 09:25:39,372 - INFO - Script avslutades korrekt
