@@ -155,26 +155,14 @@ Scriptet hanterar fel på följande sätt:
 
 ---
 
-## Säkerhet & ansvar
+## Säkerhetsöverväganden
 
-**Viktigt att känna till:**
+ **Viktigt att veta:**
 
 - Scriptet kräver root-behörighet för att kunna läsa all nödvändig systeminformation
-- Scriptet gör inga förändringar i systemet utan är enbart läsande
-- Loggfilen kan innehålla känslig information såsom IP-adresser och öppna portar
-- Loggfiler bör granskas innan de delas vidare eller lagras i publika miljöer
-
+- Scriptet gör INGA ändringar i systemet - det är enbart läsande
+- Loggfilen kan innehålla känslig information (IP-adresser, öppna portar)
 - Dela inte loggfiler offentligt utan att först granska innehållet
-
----
-
-## Screenshot
-
-Nedan visas en körning av scriptet i terminal:
-
-<p align="center">
-  <img src="docs/images/screenshot_script.png" width="800">
-</p>
 
 ---
 
