@@ -9,6 +9,8 @@ Utför en enkel säkerhetskontroll på Linux-system:
 - Sparar allt i logs/security_scan.log
 """
 
+# TEST!
+
 import os
 import sys
 import argparse
