@@ -170,8 +170,9 @@ Scriptet hanterar fel på följande sätt:
 Nedan visas en körning av scriptet i terminal:
 
 <p align="center">
-  <img src="projekt/screenshot_script.png" width="800">
+  <img src="screenshot_script.png" width="800">
 </p>
+
 
 
 
