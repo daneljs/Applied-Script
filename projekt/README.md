@@ -2,7 +2,7 @@
 
 Detta projekt är en del av kursen **Applied Script** och består av ett Python-script som automatiserar grundläggande säkerhetskontroller på ett Linux-system.
 
-Scriptet är medvetet skrivet på ett **enkelt och pedagogiskt sätt**, med tydliga kommentarer och struktur, för att visa förståelse för både scripting, Linux-kommandon och grundläggande säkerhetstänk.
+
 
 ---
 
@@ -25,16 +25,16 @@ Scriptet är **läs- och kontrollbaserat** och gör inga förändringar i system
 Scriptet utför följande steg:
 
 ### 1. Förkontroller
-- ✅ Verifierar att scriptet körs på Linux
-- ✅ Kontrollerar root/sudo-behörighet
-- ✅ Skapar loggkatalog och startar loggning
+-  Verifierar att scriptet körs på Linux
+-  Kontrollerar root/sudo-behörighet
+-  Skapar loggkatalog och startar loggning
 
 ### 2. Informationsinsamling
 - **Systeminformation**
   - Användare som kör scriptet
   - Hostname
   - Kernel-version
-  - Uptime och systembelastning
+  - Uptime och systembelastning+
 
 - **Nätverksinformation** (kan stängas av med `--no-network`)
   - IP-adresser och nätverksinterface
@@ -58,7 +58,7 @@ Scriptet utför följande steg:
 
 ### Operativsystem
 - **Linux**
-- Fungerar INTE på Windows eller macOS
+- Fungerar inte på Windows eller macOS
 
 ### Behörigheter
 - Måste köras med **sudo** eller som **root**
@@ -76,20 +76,6 @@ Scriptet utför följande steg:
 
 Alla dessa verktyg finns normalt förinstallerade på moderna Linux-distributioner.
 
----
-
-## Installation
-
-1. Klona repositoriet:
-```bash
-git clone https://github.com/ditt-användarnamn/security-scan-script.git
-cd security-scan-script
-```
-
-2. Ge scriptet exekveringsrättigheter:
-```bash
-chmod +x security_scan.py
-```
 
 ---
 
@@ -164,15 +150,14 @@ Scriptet hanterar fel på följande sätt:
 - **Ej Linux:** Avslutas med tydligt felmeddelande
 - **Ej root:** Avslutas med instruktion om sudo
 - **Kommandofel:** Loggas med returkod och felmeddelande
-- **Oväntat fel:** Loggas med full stack trace för felsökning
+- **Oväntat fel:** Loggas med detaljer om vad som gick fel
 
-Scriptet kraschar aldrig utan kontrollerad avslutning.
 
 ---
 
 ## Säkerhetsöverväganden
 
-⚠️ **Viktigt att veta:**
+ **Viktigt att veta:**
 
 - Scriptet kräver root-behörighet för att kunna läsa all nödvändig systeminformation
 - Scriptet gör INGA ändringar i systemet - det är enbart läsande
@@ -183,7 +168,7 @@ Scriptet kraschar aldrig utan kontrollerad avslutning.
 
 ## Författare
 
-**[Ditt Namn]**  
+**Daniel Törnblom**  
 IT och Cybersäkerhetsspecialist 2025  
 Frans Schartaus Handelsinstitut
 
@@ -193,13 +178,7 @@ Frans Schartaus Handelsinstitut
 
 Detta projekt är skapat för utbildningsändamål inom kursen Applied Script.
 
----
 
-## Demo
-
-![Security Scan Demo](screenshots/demo.gif)
-
-*Se scriptet i aktion - skärmdump eller länk till video finns i mappen `screenshots/`*
 
 ---
 
