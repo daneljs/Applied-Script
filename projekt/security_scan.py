@@ -151,7 +151,7 @@ def print_results(system_info, network_info, ports, suid_results):
             for line in suid_results:
                 print(f"  {line}")
     
-    print(f"\n📋 Fullständig logg: {LOG_FILE}")
+    print(f"\n Fullständig logg: {LOG_FILE}")
 
 
 def parse_arguments():
