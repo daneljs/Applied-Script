@@ -2,8 +2,6 @@
 
 Detta projekt är en del av kursen **Applied Script** och består av ett Python-script som automatiserar grundläggande säkerhetskontroller på ett Linux-system.
 
-
-
 ---
 
 ## Syfte/Mål
@@ -25,40 +23,41 @@ Scriptet är **läs- och kontrollbaserat** och gör inga förändringar i system
 Scriptet utför följande steg:
 
 ### 1. Förkontroller
--  Verifierar att scriptet körs på Linux
--  Kontrollerar root/sudo-behörighet
--  Skapar loggkatalog och startar loggning
+- Verifierar att scriptet körs på Linux
+- Kontrollerar root/sudo-behörighet
+- Skapar loggkatalog och startar loggning
 
 ### 2. Informationsinsamling
 - **Systeminformation**
   - Användare som kör scriptet
   - Hostname
   - Kernel-version
-  - Uptime och systembelastning+
+  - Uptime och systembelastning
 
 - **Nätverksinformation** (kan stängas av med `--no-network`)
   - IP-adresser och nätverksinterface
   - Routing-tabell (default gateway)
 
-- **Öppna portar**
-  - Listar alla lyssnande portar med `ss`-kommandot
+- **Öppna portar och anslutningar**
+  - Listar lyssnande portar med `ss`-kommandot
   - Visar protokoll (TCP/UDP) och adresser
+  - Kan visa alla aktiva anslutningar med `--all-conns`
 
 - **SUID-filer** (valfritt med `--suid`)
   - Hittar filer med SUID-bit satt
   - Begränsat till de första 20 resultaten
 
 ### 3. Utdata
-- Sammanfattning i terminalen
-- Detaljerad logg i `logs/security_scan.log`
+- Sammanfattning i terminalen med tydlig struktur
+- Detaljerad logg i `logs/security_scan.log` med boxramar
 
 ---
 
 ## Systemkrav
 
 ### Operativsystem
-- **Linux**
-- Fungerar inte på Windows eller macOS
+- **Linux** (testat på Kali Linux)
+- Fungerar INTE på Windows eller macOS
 
 ### Behörigheter
 - Måste köras med **sudo** eller som **root**
@@ -66,15 +65,25 @@ Scriptet utför följande steg:
 ### Beroenden
 - Python 3.6 eller senare
 - Standard Linux-verktyg:
-  - `hostname`
-  - `uname`
-  - `uptime`
+  - `hostname`, `uname`, `uptime`
   - `ip` (från iproute2-paketet)
   - `ss` (från iproute2-paketet)
-  - `find`
-  - `bash`
+  - `find`, `bash`
 
 Alla dessa verktyg finns normalt förinstallerade på moderna Linux-distributioner.
+
+---
+
+## Installation
+
+### Rekommenderad installation
+
+```bash
+git clone https://github.com/daneljs/Applied-Script.git
+cd Applied-Script/projekt
+```
+
+
 
 
 ---
@@ -82,35 +91,47 @@ Alla dessa verktyg finns normalt förinstallerade på moderna Linux-distribution
 ## Användning
 
 ### Grundläggande körning
+
 ```bash
-sudo python3 security_scan.py
+sudo ./security_scan.py
 ```
 
-### Flaggor / Argument
+### Visa hjälptext
+
+```bash
+./security_scan.py --help
+```
+
+### Flaggor och argument
 
 | Flagga | Beskrivning |
 |--------|-------------|
 | `-h`, `--help` | Visar hjälptext med alla tillgängliga flaggor |
 | `-v`, `--version` | Visar scriptets version och avslutar |
-| `--quick` | Snabbare portkontroll med mindre detaljerad output |
-| `--no-network` | Hoppar över nätverkskontroller (IP och routing) |
-| `--suid` | Kör sökning efter SUID-filer (kan ta längre tid) |
+| `--quick` | Snabbare portkontroll med mindre detaljer |
+| `--all-conns` | Visa alla anslutningar (även aktiva kopplingar) |
+| `--no-network` | Hoppar över nätverkskontroller |
+| `--suid` | Kör sökning efter SUID-filer |
 
 ### Exempel
 
-**Snabb scan utan nätverksinfo:**
-```bash
-sudo python3 security_scan.py --quick --no-network
-```
 
-**Fullständig scan inklusive SUID-filer:**
 ```bash
-sudo python3 security_scan.py --suid
-```
+# Snabb scan (mindre detaljer)
+sudo ./security_scan.py --quick
 
-**Visa hjälptext:**
-```bash
-python3 security_scan.py --help
+# Utan nätverksinformation
+sudo ./security_scan.py --no-network
+
+# Visa alla anslutningar (inkl. aktiva)
+sudo ./security_scan.py --all-conns
+
+# Inkludera SUID-sökning
+sudo ./security_scan.py --suid
+
+# Kombinera flaggor
+sudo ./security_scan.py --all-conns --suid
+
 ```
 
 ---
@@ -125,7 +146,7 @@ Loggfilen innehåller:
 - Fullständig output från varje kommando
 - Eventuella fel och felmeddelanden
 
-### Exempel på loggformat:
+### Exempel på loggformat
 ```
 2025-01-09 14:30:15 - ╔═════════════════════════════════════════════════════════════════
 2025-01-09 14:30:15 - ║ SÄKERHETSSCAN STARTAD
@@ -150,18 +171,20 @@ Scriptet hanterar fel på följande sätt:
 - **Ej Linux:** Avslutas med tydligt felmeddelande
 - **Ej root:** Avslutas med instruktion om sudo
 - **Kommandofel:** Loggas med returkod och felmeddelande
-- **Oväntat fel:** Loggas med detaljer om vad som gick fel
+- **Oväntat fel:** Loggas med detaljerad information för felsökning
+.
 
-## Säkerhet & ansvar
+---
+
+
 
 **Viktigt att känna till:**
 
 - Scriptet kräver root-behörighet för att kunna läsa all nödvändig systeminformation
-- Scriptet gör inga förändringar i systemet utan är enbart läsande
-- Loggfilen kan innehålla känslig information såsom IP-adresser och öppna portar
-- Loggfiler bör granskas innan de delas vidare eller lagras i publika miljöer
+- Scriptet gör INGA förändringar i systemet - det är enbart läsande
+- Loggfilen kan innehålla känslig information (IP-adresser, öppna portar)
+- Loggfiler bör granskas innan de delas eller lagras publikt
 
-- Loggar ska hanteras enligt principen om minsta möjliga exponering
 
 ---
 
@@ -171,9 +194,21 @@ Nedan visas en körning av scriptet i terminal:
 
 <img src="screenshot_script.png" width="700">
 
+---
 
+## Roadmap
 
+### Planerad utveckling
 
+**Kortsiktiga mål:**
+- Se till att logg blir mer lättläst
+- Flagga ovanliga öppna portar
+
+**Långsiktiga mål:**
+- Jämföra scanningar över tid (baseline-funktionalitet)
+- Stöd för fler operativsystem
+- Automatiska varningar för misstänkta SUID-filer
+---
 
 ## Författare
 
@@ -185,12 +220,7 @@ Frans Schartaus Handelsinstitut
 
 ## Licens
 
-Detta projekt är skapat för utbildningsändamål i kursen Applied Script.
-
-
+Detta projekt är skapat för utbildningsändamål inom kursen Applied Script.
 
 ---
 
-## Version
-
-**Version 1.6** (2025-01-09)
