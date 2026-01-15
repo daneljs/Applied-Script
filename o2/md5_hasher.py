@@ -5,7 +5,7 @@
 Password and Hash Generator (Very UNsecure version)
 Generates random numeric passwords and calculates their MD5 hashes.
 
-Author: Frans Schartau
+Author: Daniel Törnblomu
 Last Update: 2025-12-08
 
 WARNING: MD5 is considered cryptographically broken and should not be used
